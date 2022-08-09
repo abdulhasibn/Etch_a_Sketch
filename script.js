@@ -35,4 +35,17 @@ resetButton.addEventListener("click", () => {
     for (const grid of grids){
         grid.style.backgroundColor = "white";
     }
-})
+});
+const randomButton = document.getElementById("random");
+randomButton.addEventListener("click", () => {
+    let randomColors = ["red", "green", "blue", "yellow", "brown", "grey", "purple" ]    
+    function getColor() {
+        let randomIndexNo = Math.floor(Math.random() * 6);
+        return randomColors[randomIndexNo];
+    }
+    for (const grid of grids){
+        grid.addEventListener('mouseover', () => {
+            grid.style.backgroundColor = getColor();
+        });
+    };
+});
