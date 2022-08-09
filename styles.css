@@ -3,3 +3,62 @@
 *::after{
     box-sizing: border-box;
 }
+body{
+    background-image: linear-gradient(90deg, rgb(90, 108, 109),  rgb(111, 180, 185) 30% , rgb(2, 56, 59));
+    font-family: 'Gulzar', serif;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-top: 1em;
+    word-spacing: 20px;
+}
+.btns{
+    border: 0;
+    font-size: 1.3rem;
+    padding: .5em;
+    border-radius: 10px;
+    background-color: white;
+}
+.btns:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.hero{
+    display: flex;
+    align-items: center;
+    margin-left: 27em;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+}
+.canvas{
+    width: 600px;
+    height: 600px;
+    background-color: white;
+}
+.color_picker{
+    margin: 0 auto;
+    display: block;
+}
+.color_picker:hover{
+    cursor: pointer;
+}
+.color_picker_label{
+    font-size: 1.1rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: .5em;
+    margin-right: .3em;
+    display: block;
+}
+.cells{
+    min-width: 20px;
+    min-height: 20px;
+    display: inline-block;
+    border: 1px solid black;
+}
