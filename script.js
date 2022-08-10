@@ -65,4 +65,4 @@ function updateAll(event){
             grid.style.backgroundColor = event.target.value;
         });
     };
-}
+};
