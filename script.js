@@ -6,13 +6,19 @@ function makeCells(rows, cols){
         let cell = document.createElement("div");
         canvas.appendChild(cell).className = "grid_item";
     }
-    let displaySize = document.createElement("p");
-    displaySize.innerText = `${rows}x${cols}`;
-    const hero = document.querySelector(".hero");
-    hero.appendChild(displaySize).className = "display_size";
-
 }
-makeCells(16, 16);
+let slider = document.getElementById("range");
+let displaySize = document.createElement("p");
+displaySize.innerText = `${slider.value}x${slider.value}`;
+const sliderContainer = document.querySelector(".slider_container");
+sliderContainer.appendChild(displaySize).className = "display_size";
+slider.oninput = function(){
+    displaySize.innerText = `${this.value}x${this.value}`;
+}
+function getSliderValue(){
+    return slider.value;
+}
+makeCells(getSliderValue(), getSliderValue());
 const grids = document.getElementsByClassName("grid_item");
 const blackButton =document.getElementById("black");
 blackButton.addEventListener('click', () =>{
