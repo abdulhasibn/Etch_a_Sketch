@@ -49,3 +49,20 @@ randomButton.addEventListener("click", () => {
         });
     };
 });
+
+let colorWell;
+let defaultValue = "#ff0000";
+window.addEventListener("load", startUp);
+
+function startUp(){
+    colorWell = document.getElementById("color_well");
+    colorWell.value = defaultValue;
+    colorWell.addEventListener('change', updateAll)
+};
+function updateAll(event){
+    for (const grid of grids){
+        grid.addEventListener('mouseover', () => {
+            grid.style.backgroundColor = event.target.value;
+        });
+    };
+}
