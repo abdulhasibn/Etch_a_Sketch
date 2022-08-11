@@ -1,24 +1,24 @@
 const canvas = document.querySelector(".canvas");
-function makeCells(rows, cols){
-    canvas.style.setProperty(("--grid-rows"), rows);
-    canvas.style.setProperty(("--grid-cols"), cols);
-    for (let i = 0; i < (rows * cols); i ++){
+function makeCells(vals){
+    canvas.style.setProperty(("--grid-rows"), vals);
+    canvas.style.setProperty(("--grid-cols"), vals);
+    for (let i = 0; i < (vals**2); i ++){
         let cell = document.createElement("div");
         canvas.appendChild(cell).className = "grid_item";
     }
 }
 let slider = document.getElementById("range");
 let displaySize = document.createElement("p");
-displaySize.innerText = `${slider.value}x${slider.value}`;
+let sliderValue = slider.value;
+displaySize.innerText = `${sliderValue}x${sliderValue}`;
 const sliderContainer = document.querySelector(".slider_container");
 sliderContainer.appendChild(displaySize).className = "display_size";
 slider.oninput = function(){
-    displaySize.innerText = `${this.value}x${this.value}`;
+    let gridValue = this.value;
+    displaySize.innerText = `${gridValue}x${gridValue}`;
 }
-function getSliderValue(){
-    return slider.value;
-}
-makeCells(getSliderValue(), getSliderValue());
+//slider.addEventListener("change", )
+makeCells(sliderValue);
 const grids = document.getElementsByClassName("grid_item");
 const blackButton =document.getElementById("black");
 blackButton.addEventListener('click', () =>{
