@@ -1,5 +1,6 @@
 const canvas = document.querySelector(".canvas");
 function makeCells(vals){
+    clearCanvas();
     canvas.style.setProperty(("--grid-rows"), vals);
     canvas.style.setProperty(("--grid-cols"), vals);
     for (let i = 0; i < (vals**2); i ++){
@@ -7,14 +8,17 @@ function makeCells(vals){
         canvas.appendChild(cell).className = "grid_item";
     }
 }
+function clearCanvas(){
+    canvas.innerText = "";
+}
 let slider = document.getElementById("range");
 let displaySize = document.createElement("p");
 let sliderValue = slider.value;
 displaySize.innerText = `${sliderValue}x${sliderValue}`;
 const sliderContainer = document.querySelector(".slider_container");
 sliderContainer.appendChild(displaySize).className = "display_size";
-slider.oninput = function(){
-    let gridValue = this.value;
+slider.oninput = (e) => {
+    let gridValue = e.target.value;
     displaySize.innerText = `${gridValue}x${gridValue}`;
     makeCells(gridValue);
 }
@@ -85,8 +89,3 @@ function updateAll(event){
         });
     };
 };
-slider.addEventListener("input", () => {
-    for (const grid of grids){
-        grid.style.backgroundColor = "white";
-    }
-});
