@@ -71,10 +71,6 @@ h1{
     padding: .5em;
     display: block;
 }
-.grid_item{
-    min-height: 1px;
-    min-width: 1px;
-}
 .display_size{
     color: white;
     font-size: 1.3rem;

@@ -16,8 +16,8 @@ sliderContainer.appendChild(displaySize).className = "display_size";
 slider.oninput = function(){
     let gridValue = this.value;
     displaySize.innerText = `${gridValue}x${gridValue}`;
+    makeCells(gridValue);
 }
-//slider.addEventListener("change", )
 makeCells(sliderValue);
 const grids = document.getElementsByClassName("grid_item");
 const blackButton =document.getElementById("black");
@@ -72,3 +72,8 @@ function updateAll(event){
         });
     };
 };
+slider.addEventListener("input", () => {
+    for (const grid of grids){
+        grid.style.backgroundColor = "white";
+    }
+});
