@@ -28,6 +28,19 @@ blackButton.addEventListener('click', () =>{
         } );
     }
 });
+const shaderButton =document.getElementById("shader");
+shaderButton.addEventListener('click', () =>{
+    let counter = 1;
+    for (const grid of grids){
+        grid.addEventListener('mouseover',() => {
+            function makeShady(){
+                counter++;
+                return counter * 2;
+            }
+            grid.style.backgroundColor = `rgba(0,0,0,${makeShady()}%)`;
+        } );
+    }
+});
 const eraserButton = document.getElementById("eraser");
 eraserButton.addEventListener('click', () =>{
     for (const grid of grids){
