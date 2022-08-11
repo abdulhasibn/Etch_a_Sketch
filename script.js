@@ -44,9 +44,9 @@ resetButton.addEventListener("click", () => {
 });
 const randomButton = document.getElementById("random");
 randomButton.addEventListener("click", () => {
-    let randomColors = ["red", "green", "blue", "yellow", "brown", "grey", "purple" ]    
+    let randomColors = ["red", "green", "blue", "yellow", "brown", "grey", "purple", "violet", "aliceblue", "aquamarine", "navy", "olive" ]    
     function getColor() {
-        let randomIndexNo = Math.floor(Math.random() * 6);
+        let randomIndexNo = Math.floor(Math.random() * randomColors.length);
         return randomColors[randomIndexNo];
     }
     for (const grid of grids){
