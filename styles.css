@@ -11,6 +11,11 @@ body {
     rgb(2, 102, 94)
   );
   font-family: "Gulzar", serif;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 :root {
   --grid-rows: 1;
@@ -124,4 +129,31 @@ h1 {
 .canvas_container {
   display: flex;
   flex-direction: column;
+}
+footer {
+  color: white;
+  background-color: rgb(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-spacing: 0.3em;
+  gap: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.img-icon {
+  width: 30px;
+  margin: 0;
+  padding: 0;
 }
