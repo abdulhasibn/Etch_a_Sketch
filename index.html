@@ -16,34 +16,36 @@
   <body>
     <div class="heading"><h1>Etch-a-Sketch</h1></div>
     <div class="hero" id="hero">
-      <div class="controls" id="controls">
-        <button class="btns" id="reset">Reset</button>
-        <button class="btns" id="random">Random</button>
-        <button class="btns" id="black">Black</button>
-        <button class="btns" id="eraser">Eraser</button>
-        <!--<button class="btns" id="shader">Shader</button> <! -->
-        <label for="Color_well" class="color_picker_label btns">
-          Color-picker
-          <input
-            type="color"
-            class="color_picker"
-            value="#000000"
-            name="color-picker"
-            id="color_well"
-          />
-        </label>
-      </div>
-      <div class="canvas_container">
-        <div class="canvas" id="canvas"></div>
-        <div class="slider_container">
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="16"
-            id="range"
-            class="slider"
-          />
+      <div class="playground">
+        <div class="canvas_container">
+          <div class="canvas" id="canvas"></div>
+          <div class="slider_container">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="16"
+              id="range"
+              class="slider"
+            />
+          </div>
+        </div>
+        <div class="controls" id="controls">
+          <button class="btns" id="reset">Reset</button>
+          <button class="btns" id="random">Random</button>
+          <button class="btns" id="black">Black</button>
+          <button class="btns" id="eraser">Eraser</button>
+          <!--<button class="btns" id="shader">Shader</button> <! -->
+          <label for="Color_well" class="color_picker_label btns">
+            Color-picker
+            <input
+              type="color"
+              class="color_picker"
+              value="#000000"
+              name="color-picker"
+              id="color_well"
+            />
+          </label>
         </div>
       </div>
     </div>

@@ -21,6 +21,7 @@ h1 {
   font-size: 3rem;
   color: white;
   margin-top: 0.6em;
+  margin-bottom: 0;
   word-spacing: 20px;
   text-shadow: -4px 4px 15px rgba(0, 0, 0, 0.79);
 }
@@ -33,6 +34,7 @@ h1 {
   box-shadow: -4px 3px 18px 0px rgba(0, 0, 0, 0.48);
   -webkit-box-shadow: -4px 3px 18px 0px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: -4px 3px 18px 0px rgba(0, 0, 0, 0.48);
+  transition: ease-out all 0.5s;
 }
 .btns:hover {
   cursor: pointer;
@@ -41,7 +43,14 @@ h1 {
 .hero {
   display: flex;
   align-items: center;
-  margin-left: 28.2em;
+  justify-content: center;
+}
+.playground {
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 2em 2em 0 2em;
 }
 .controls {
   display: flex;
@@ -85,7 +94,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 .slider {
   width: 35%;
